@@ -1,0 +1,6 @@
+@freddit_HostAddress = http://localhost:5011
+
+GET {{freddit_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
