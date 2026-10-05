@@ -4,7 +4,6 @@ public class Post {
     public int Id { get; set; }
     public string Title { get; set; }
     public string Content { get; set; }
-    public DateTime CreatedAt { get; set; }
     public int Upvotes { get; set; }
     public int Downvotes { get; set; }
     public User User { get; set; }
@@ -20,7 +19,6 @@ public class Post {
         Id = 0;
         Title = "";
         Content = "";
-        CreatedAt = DateTime.Now;
         Upvotes = 0;
         Downvotes = 0;
         User = null;
