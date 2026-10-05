@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "freddit", "freddit\freddit.csproj", "{2E2896AD-C1D0-4F39-9F30-9E3F764E8AC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shared", "..\kreddit\kreddit\shared\shared.csproj", "{19A63F61-D5D4-40A6-827D-1D69FE873581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kreddit-app", "..\kreddit\kreddit\kreddit-app\kreddit-app.csproj", "{5C542C89-128F-48F3-B90C-7168F1B72B57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{2E2896AD-C1D0-4F39-9F30-9E3F764E8AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E2896AD-C1D0-4F39-9F30-9E3F764E8AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E2896AD-C1D0-4F39-9F30-9E3F764E8AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A63F61-D5D4-40A6-827D-1D69FE873581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A63F61-D5D4-40A6-827D-1D69FE873581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A63F61-D5D4-40A6-827D-1D69FE873581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A63F61-D5D4-40A6-827D-1D69FE873581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C542C89-128F-48F3-B90C-7168F1B72B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C542C89-128F-48F3-B90C-7168F1B72B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C542C89-128F-48F3-B90C-7168F1B72B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C542C89-128F-48F3-B90C-7168F1B72B57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
