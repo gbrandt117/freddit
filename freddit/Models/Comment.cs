@@ -7,6 +7,8 @@ public class Comment
     public int Upvotes { get; set; }
     public int Downvotes { get; set; }
     public User User { get; set; }
+    
+    public int PostId { get; set; }
     public Comment(string content = "", int upvotes = 0, int downvotes = 0, User user = null)
     {
         Content = content;

@@ -83,22 +83,46 @@ app.MapPut("/api/posts/{id}/downvote", async (int id, AppDbContext db) =>
         return Results.NotFound();
     }
 
-    post.Downvotes--;
+    post.Downvotes++;
 
     await db.SaveChangesAsync();
 
     return Results.Ok(post);
 });
 
-app.MapPut("/api/posts/{postid}/comments/{commentid}/upvote",() =>
-{
+app.MapPut("/api/posts/{postid}/comments/{commentid}/upvote",
+    async (int postid, int commentid, AppDbContext db) =>
+    {
+        var comment = await db.Comments.FindAsync(commentid);
 
-});
+        if (comment == null)
+        {
+            return Results.NotFound();
+        }
 
-app.MapPut("/api/posts/{postid}/comments/{commentid}/downvote",() =>
-{
+        comment.Upvotes++;
 
-});
+        await db.SaveChangesAsync();
+
+        return Results.Ok(comment);
+    });
+
+app.MapPut("/api/posts/{postid}/comments/{commentid}/downvote",
+    async (int postid, int commentid, AppDbContext db) =>
+    {
+        var comment = await db.Comments.FindAsync(commentid);
+
+        if (comment == null)
+        {
+            return Results.NotFound();
+        }
+
+        comment.Downvotes++;
+
+        await db.SaveChangesAsync();
+
+        return Results.Ok(comment);
+    });
 
 
 //POST
@@ -119,7 +143,9 @@ app.MapPost("/api/posts/{id}/comments", async (int id, Comment comment, AppDbCon
     {
         return Results.NotFound();
     }
-    
+
+    comment.PostId = id;
+
     db.Comments.Add(comment);
     await db.SaveChangesAsync();
 
